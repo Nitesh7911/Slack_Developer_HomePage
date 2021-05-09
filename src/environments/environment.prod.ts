@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl : 'https://slack-developers-backend.herokuapp.com'
 };

@@ -1,1 +1,26 @@
-Slack Developer HomePage
+<h1>Developer HomePage</h1> 
+<br>
+<form *ngIf="selectedCandidate">
+	<fieldset>
+	<legend>Your Info</legend>
+	<label for="name">Name: </label>
+    <label for="name">{{selectedCandidate.name}}</label>
+    <br>
+    <label for="name">Age: </label>
+    <label for="name">{{selectedCandidate.age}}</label>
+    <br>
+    <label for="name">Phone Number: </label>
+    <label for="name">{{selectedCandidate.phone_number}}</label>
+    <br>
+    <label for="name">Email ID: </label>
+    <label for="name">{{selectedCandidate.email_id}}</label>
+    <br>
+    <label for="name">Current Company: </label>
+    <label for="name">{{selectedCandidate.current_company}}</label>
+    <br>
+    <label for="name">Opportunity: </label>
+    <label for="name">{{selectedCandidate.opportunity}}</label>
+    <br>
+	</fieldset>
+	<br>
+</form>
