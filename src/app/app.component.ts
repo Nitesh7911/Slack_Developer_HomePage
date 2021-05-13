@@ -8,13 +8,15 @@ import { CandidateService } from './services/candidate.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'slack-developer';
+  title = 'Developers HomePage';
   selectedCandidate : Candidate;
+  allCandidates:Candidate[];
   constructor(private candidateService : CandidateService){}
 
   ngOnInit(): void {
-      this.candidateService.getCandidate().subscribe(data=>{this.selectedCandidate=data;
-      console.log(this.selectedCandidate)});
+      this.candidateService.getSingleCandidate().subscribe(data=>{this.selectedCandidate=data});
+      this.candidateService.getAllCandidate().subscribe(data=>{this.allCandidates=data;
+      console.log(this.allCandidates)});
   }
 
 }

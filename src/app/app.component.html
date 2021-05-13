@@ -1,26 +1,28 @@
-<h1>Developer HomePage</h1> 
-<br>
-<form *ngIf="selectedCandidate">
+<div *ngIf="allCandidates">
+<h1>{{title}}</h1>
+<h2>Candidates Information</h2>
+<form *ngFor="let candidate of allCandidates">
 	<fieldset>
-	<legend>Your Info</legend>
+	<legend>Candidate {{candidate.id}}</legend>
 	<label for="name">Name: </label>
-    <label for="name">{{selectedCandidate.name}}</label>
+    <label for="name">{{candidate.name}}</label>
     <br>
     <label for="name">Age: </label>
-    <label for="name">{{selectedCandidate.age}}</label>
+    <label for="name">{{candidate.age}}</label>
     <br>
     <label for="name">Phone Number: </label>
-    <label for="name">{{selectedCandidate.phone_number}}</label>
+    <label for="name">{{candidate.phone_number}}</label>
     <br>
     <label for="name">Email ID: </label>
-    <label for="name">{{selectedCandidate.email_id}}</label>
+    <label for="name">{{candidate.email_id}}</label>
     <br>
     <label for="name">Current Company: </label>
-    <label for="name">{{selectedCandidate.current_company}}</label>
+    <label for="name">{{candidate.current_company}}</label>
     <br>
     <label for="name">Opportunity: </label>
-    <label for="name">{{selectedCandidate.opportunity}}</label>
-    <br>
+    <label for="name">{{candidate.opportunity}}</label>
 	</fieldset>
 	<br>
 </form>
+</div>
+<div *ngIf="!allCandidates"> Page Not Found Please Try Again Later</div>

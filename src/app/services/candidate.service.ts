@@ -15,7 +15,11 @@ export class CandidateService {
 
   configUrl = environment.apiUrl;
 
-  getCandidate() {
-    return this.http.get<Candidate>(this.configUrl+"/test_db");
+  getSingleCandidate() {
+    return this.http.get<Candidate>(this.configUrl+"/candidates/returnSingleCandidate");
+  }
+
+  getAllCandidate() {
+    return this.http.get<Candidate[]>(this.configUrl+"/candidates/returnAllCandidates");
   }
 }
